@@ -6,16 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://cenganhui.github.io">
-  <title>Akuma Blog</title>
+  <title>Java基础（一） | Akuma Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="记录学习日常">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Akuma Blog">
-<meta property="og:url" content="https://cenganhui.github.io/index.html">
+  <meta name="description" content="Java语言的特点 简单 面向对象（封装、继承、多态） 平台无关（JVM实现） 可靠 安全 支持多线程 支持网络编程 编译与解释并存">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java基础（一）">
+<meta property="og:url" content="https://cenganhui.github.io/2020/04/28/test2/index.html">
 <meta property="og:site_name" content="Akuma Blog">
-<meta property="og:description" content="记录学习日常">
+<meta property="og:description" content="Java语言的特点 简单 面向对象（封装、继承、多态） 平台无关（JVM实现） 可靠 安全 支持多线程 支持网络编程 编译与解释并存">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-04-28T12:54:07.000Z">
+<meta property="article:modified_time" content="2020-04-28T15:03:27.771Z">
 <meta property="article:author" content="Akuma">
+<meta property="article:tag" content="Java基础">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Akuma Blog" type="application/atom+xml">
@@ -152,16 +155,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-test2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-test2" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/28/test2/">Java基础（一）</a>
+    <h1 class="article-title" itemprop="name">
+      Java基础（一）
     </h1>
   
 
@@ -182,10 +183,136 @@
 <li>安全</li>
 <li>支持多线程</li>
 <li>支持网络编程</li>
-<li>编译与解释并存
-        
-          <a class="article-more-a" href="/2020/04/28/test2/#more">more >></a>
-        
+<li>编译与解释并存<a id="more"></a>
+<h2 id="JVM、JDK和JRE"><a href="#JVM、JDK和JRE" class="headerlink" title="JVM、JDK和JRE"></a>JVM、JDK和JRE</h2></li>
+</ol>
+<ul>
+<li>JVM：Java虚拟机，是运行Java字节码的虚拟机。<ul>
+<li>Java程序从源代码到运行一般有下面3步：</li>
+<li>.java文件–JDK中javac编译–&gt;.class文件–JVM–&gt;机器可执行的二进制码</li>
+</ul>
+</li>
+<li>JDK：JavaDevelopment Kit，开发工具包。</li>
+<li>JRE：Java运行时环境。</li>
+</ul>
+<h2 id="Java基本类型所占存储空间大小"><a href="#Java基本类型所占存储空间大小" class="headerlink" title="Java基本类型所占存储空间大小"></a>Java基本类型所占存储空间大小</h2><table>
+<thead>
+<tr>
+<th>基本类型</th>
+<th>大小</th>
+<th>最小值</th>
+<th>最大值</th>
+<th>包装类</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>boolean</td>
+<td>？</td>
+<td>？</td>
+<td>？</td>
+<td>Boolean</td>
+</tr>
+<tr>
+<td>char</td>
+<td>16bit</td>
+<td>0</td>
+<td>2^16-1</td>
+<td>Character</td>
+</tr>
+<tr>
+<td>byte</td>
+<td>8bit</td>
+<td>-128</td>
+<td>+127</td>
+<td>Byte</td>
+</tr>
+<tr>
+<td>short</td>
+<td>16bit</td>
+<td>-2^15</td>
+<td>+2^15</td>
+<td>Short</td>
+</tr>
+<tr>
+<td>int</td>
+<td>32bit</td>
+<td>-2^31</td>
+<td>+2^31-1</td>
+<td>Integer</td>
+</tr>
+<tr>
+<td>long</td>
+<td>64bit</td>
+<td>-2^63+2^63-1</td>
+<td>Long</td>
+<td></td>
+</tr>
+<tr>
+<td>float</td>
+<td>32bit</td>
+<td>IEEE754</td>
+<td>IEEE754</td>
+<td>Float</td>
+</tr>
+<tr>
+<td>double</td>
+<td>64bit</td>
+<td>IEEE754</td>
+<td>IEEE754</td>
+<td>Double</td>
+</tr>
+<tr>
+<td>void</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>Void</td>
+</tr>
+</tbody></table>
+<h2 id="重载与重写的区别"><a href="#重载与重写的区别" class="headerlink" title="重载与重写的区别"></a>重载与重写的区别</h2><ul>
+<li>重载：发生在同一个类中，方法名必须相同，参数类型不同、个数不同、顺序不同，方法返回值和访问修饰符可以不同。</li>
+<li>重写：子类对父类的允许访问的方法的实现过程进行重新编写，发生在子类中，方法名、参数列表必须相同，返回值范围&lt;=父类，抛出异常范围&lt;=父类，访问修饰符范围&gt;=父类，若父类方法是private，则子类不能重写。</li>
+</ul>
+<h2 id="Java面向对象的三大特性"><a href="#Java面向对象的三大特性" class="headerlink" title="Java面向对象的三大特性"></a>Java面向对象的三大特性</h2><ul>
+<li><strong>封装</strong><ul>
+<li>把对象的属性私有化，同时提供一些可以被外界访问属性的方法。</li>
+</ul>
+</li>
+<li><strong>继承</strong><ul>
+<li>使用已存在的类的定义作为基础类建立新的类。<ol>
+<li>子类拥有父类对象的所有属性和方法（包括私有的），但父类中的私有子类是无法访问的，<strong>只是拥有</strong>。</li>
+<li>子类可以拥有自己的属性和方法，即对父类拓展。</li>
+<li>子类可以用自己的方式实现父类的方法（重写）。</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><strong>多态</strong><ul>
+<li>一个引用变量到底会指向哪个类的实例对象，该引用变量发出的方法调用到底是哪个类中实现的方法，必须在由程序运行期间才能决定。</li>
+</ul>
+</li>
+</ul>
+<h2 id="String、StringBuffer和StringBuilder"><a href="#String、StringBuffer和StringBuilder" class="headerlink" title="String、StringBuffer和StringBuilder"></a>String、StringBuffer和StringBuilder</h2><ul>
+<li><strong>可变性</strong>：String使用final关键字修饰char数组，所以String对象是不可变的。而StringBuffer和StringBuilder没有使用final修饰，因此可变。</li>
+<li><strong>线程安全性</strong>：<ul>
+<li>String对象不可变，安全。</li>
+<li>StringBuffer对方法加锁，安全。</li>
+<li>StringBuilder没有加锁，不安全。</li>
+</ul>
+</li>
+</ul>
+<h2 id="自动装箱与拆箱"><a href="#自动装箱与拆箱" class="headerlink" title="自动装箱与拆箱"></a>自动装箱与拆箱</h2><ul>
+<li>装箱：基本类型-&gt;包装类</li>
+<li>拆箱：包装类-&gt;基本类型</li>
+</ul>
+<h2 id="接口和抽象类的区别"><a href="#接口和抽象类的区别" class="headerlink" title="接口和抽象类的区别"></a>接口和抽象类的区别</h2><ol>
+<li>接口的方法默认public，不能有实现（Java 8接口方法有默认实现），抽象类可以有非抽象方法。</li>
+<li>接口中除了static、final变量，不能有其他变量，抽象类则不一定。</li>
+<li>一个类可以实现多个接口，但只能继承一个抽象类。</li>
+<li>接口方法默认修饰符是public，抽象方法可以有public、protected和default。</li>
+<li>抽象是对类的抽象，是一种模板设计，接口是对行为的抽象，是一种行为规范。</li>
+</ol>
+
       
 
       
@@ -218,16 +345,75 @@
 
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/28/test2/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://cenganhui.github.io/2020/04/28/test2/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2020/04/28/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">我的第一篇博客</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -242,87 +428,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-我的第一篇博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/28/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">我的第一篇博客</a>
-    </h1>
-  
-
-        
-        <a href="/2020/04/28/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2020-04-28T01:21:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="这是我的第一篇博客"><a href="#这是我的第一篇博客" class="headerlink" title="这是我的第一篇博客"></a>这是我的第一篇博客</h2><p>test</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/spring//" class="article-tag-list-link color2">spring</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/28/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Java语言的特点"><span class="toc-number">1.</span> <span class="toc-text">Java语言的特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JVM、JDK和JRE"><span class="toc-number">2.</span> <span class="toc-text">JVM、JDK和JRE</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java基本类型所占存储空间大小"><span class="toc-number">3.</span> <span class="toc-text">Java基本类型所占存储空间大小</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#重载与重写的区别"><span class="toc-number">4.</span> <span class="toc-text">重载与重写的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java面向对象的三大特性"><span class="toc-number">5.</span> <span class="toc-text">Java面向对象的三大特性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#String、StringBuffer和StringBuilder"><span class="toc-number">6.</span> <span class="toc-text">String、StringBuffer和StringBuilder</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#自动装箱与拆箱"><span class="toc-number">7.</span> <span class="toc-text">自动装箱与拆箱</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#接口和抽象类的区别"><span class="toc-number">8.</span> <span class="toc-text">接口和抽象类的区别</span></a></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
+  
+  
+  
 
   
+
+  
+
   
 
 
@@ -345,8 +476,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
