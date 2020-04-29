@@ -16,7 +16,7 @@
 <meta property="og:description" content="Java语言的特点 简单 面向对象（封装、继承、多态） 平台无关（JVM实现） 可靠 安全 支持多线程 支持网络编程 编译与解释并存">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-04-28T12:54:07.000Z">
-<meta property="article:modified_time" content="2020-04-28T15:03:27.771Z">
+<meta property="article:modified_time" content="2020-04-29T02:27:57.777Z">
 <meta property="article:author" content="Akuma">
 <meta property="article:tag" content="Java基础">
 <meta name="twitter:card" content="summary">
@@ -312,6 +312,28 @@
 <li>接口方法默认修饰符是public，抽象方法可以有public、protected和default。</li>
 <li>抽象是对类的抽象，是一种模板设计，接口是对行为的抽象，是一种行为规范。</li>
 </ol>
+<h2 id="与equals"><a href="#与equals" class="headerlink" title="==与equals()"></a>==与equals()</h2><ul>
+<li><strong>==</strong>：判断两个对象的地址是否相等，即判断两个对象是不是同一个对象。（基本数据类型==比较的是值，引用数据类型==比较的是内存地址）</li>
+<li><strong>equals()</strong>：判断两个对象是否相等。一般有两种情况：<ol>
+<li>类没有重写equals()，则通过equals()比较两个对象时，等价于“==”比较这两个对象。</li>
+<li>类重写equals()。重写一般是来比较两个对象的内容是否相等，相等返回true。<h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">String a = <span class="keyword">new</span> String(<span class="string">"ab"</span>);  <span class="comment">//a为一个引用</span></span><br><span class="line">String b = <span class="keyword">new</span> String(<span class="string">"ab"</span>);  <span class="comment">//b为另一个引用，对象的内容一样</span></span><br><span class="line">String aa = <span class="string">"ab"</span>; <span class="comment">//放在常量池中</span></span><br><span class="line">String bb = <span class="string">"ab"</span>; <span class="comment">//从常量池中查找</span></span><br><span class="line"><span class="keyword">if</span>(aa == bb)   <span class="comment">//true，同一个对象</span></span><br><span class="line"><span class="keyword">if</span>(a == b)     <span class="comment">//false，不是同一个对象</span></span><br><span class="line"><span class="keyword">if</span>(a.equals(b));  <span class="comment">//true</span></span><br><span class="line"><span class="keyword">if</span>(<span class="number">42</span> == <span class="number">42.0</span>) <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+<h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3></li>
+</ol>
+</li>
+<li>String中equals()方法被重写过，Object的equals()比较的是对象的内存地址，String中的equals()比较的是对象的内容。</li>
+</ul>
+<h2 id="hashCode与equals"><a href="#hashCode与equals" class="headerlink" title="hashCode与equals"></a>hashCode与equals</h2><ul>
+<li><strong>hashCode()</strong>：作用是获取哈希码，也称散列码。返回的是一个int，确定对象在哈希表中的索引位置。</li>
+<li><strong>具体作用</strong>：“以HashSet如何检查重复”为例，当把对象加入HashSet时，先计算对象的hashCode来判断对象的加入位置，同时也会与该位置其他已经加入的对象的hashCode作比较，如果没有相等的hashCode，HashSet会假设对象没有重复出现。但如果发现有相同hashCode的对象，这是会调用equals()来检查hashCode相等的对象是否真的相同（是否是同一个对象）。如果相同，就加入失败。如果不同，就会重新散列到其他位置，这样就减少了equals()的次数，提高了执行效率。</li>
+<li><strong>hashCode()与equals()的相关规定</strong><ol>
+<li>如果两个对象相等，则hashCode一定相同。</li>
+<li>两个对象相等，对两个对象调用equals()返回true。</li>
+<li>两个对象的hashC相同，它们不一定相等。</li>
+<li>如果equals()被重写，则hashCode()也必须被重写。</li>
+<li>hashCode()默认对堆上的对象产生独特值，如果没有重写hashCode()，则该class的两个对象无论如何都不会相等。（即使两个对象内容相等）</li>
+</ol>
+</li>
+</ul>
 
       
 
@@ -406,6 +428,15 @@
   
 <nav id="article-nav">
   
+    <a href="/2020/04/29/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%EF%BC%88%E4%B8%80%EF%BC%89/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          排序算法（一）
+        
+      </div>
+    </a>
+  
   
     <a href="/2020/04/28/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">我的第一篇博客</div>
@@ -435,7 +466,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Java语言的特点"><span class="toc-number">1.</span> <span class="toc-text">Java语言的特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JVM、JDK和JRE"><span class="toc-number">2.</span> <span class="toc-text">JVM、JDK和JRE</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java基本类型所占存储空间大小"><span class="toc-number">3.</span> <span class="toc-text">Java基本类型所占存储空间大小</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#重载与重写的区别"><span class="toc-number">4.</span> <span class="toc-text">重载与重写的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java面向对象的三大特性"><span class="toc-number">5.</span> <span class="toc-text">Java面向对象的三大特性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#String、StringBuffer和StringBuilder"><span class="toc-number">6.</span> <span class="toc-text">String、StringBuffer和StringBuilder</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#自动装箱与拆箱"><span class="toc-number">7.</span> <span class="toc-text">自动装箱与拆箱</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#接口和抽象类的区别"><span class="toc-number">8.</span> <span class="toc-text">接口和抽象类的区别</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Java语言的特点"><span class="toc-number">1.</span> <span class="toc-text">Java语言的特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JVM、JDK和JRE"><span class="toc-number">2.</span> <span class="toc-text">JVM、JDK和JRE</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java基本类型所占存储空间大小"><span class="toc-number">3.</span> <span class="toc-text">Java基本类型所占存储空间大小</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#重载与重写的区别"><span class="toc-number">4.</span> <span class="toc-text">重载与重写的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java面向对象的三大特性"><span class="toc-number">5.</span> <span class="toc-text">Java面向对象的三大特性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#String、StringBuffer和StringBuilder"><span class="toc-number">6.</span> <span class="toc-text">String、StringBuffer和StringBuilder</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#自动装箱与拆箱"><span class="toc-number">7.</span> <span class="toc-text">自动装箱与拆箱</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#接口和抽象类的区别"><span class="toc-number">8.</span> <span class="toc-text">接口和抽象类的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#与equals"><span class="toc-number">9.</span> <span class="toc-text">&#x3D;&#x3D;与equals()</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#例子"><span class="toc-number">9.1.</span> <span class="toc-text">例子</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#说明"><span class="toc-number">9.2.</span> <span class="toc-text">说明</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hashCode与equals"><span class="toc-number">10.</span> <span class="toc-text">hashCode与equals</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -540,6 +571,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Java基础</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">排序算法</a>
               </li>
             
             <div class="clearfix"></div>
