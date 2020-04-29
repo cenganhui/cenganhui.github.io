@@ -6,20 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://cenganhui.github.io">
-  <title>Java基础（一） | Akuma Blog</title>
+  <title>Java基础（二） | Akuma Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Java语言的特点 简单 面向对象（封装、继承、多态） 平台无关（JVM实现） 可靠 安全 支持多线程 支持网络编程 编译与解释并存">
+  <meta name="description" content="Java基础（二）">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java基础（一）">
-<meta property="og:url" content="https://cenganhui.github.io/2020/04/28/test2/index.html">
+<meta property="og:title" content="Java基础（二）">
+<meta property="og:url" content="https://cenganhui.github.io/2020/04/29/Java%E5%9F%BA%E7%A1%80%EF%BC%88%E4%BA%8C%EF%BC%89/index.html">
 <meta property="og:site_name" content="Akuma Blog">
-<meta property="og:description" content="Java语言的特点 简单 面向对象（封装、继承、多态） 平台无关（JVM实现） 可靠 安全 支持多线程 支持网络编程 编译与解释并存">
+<meta property="og:description" content="Java基础（二）">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-04-28T12:54:07.000Z">
-<meta property="article:modified_time" content="2020-04-29T02:27:57.777Z">
+<meta property="og:image" content="http://github.com/cenganhui/Blog_Image/raw/master/Java%E5%9F%BA%E7%A1%80%EF%BC%88%E4%BA%8C%EF%BC%89/Java%E7%BA%BF%E7%A8%8B%E7%8A%B6%E6%80%81%E5%8F%98%E8%BF%81.png">
+<meta property="og:image" content="http://github.com/cenganhui/Blog_Image/raw/master/Java%E5%9F%BA%E7%A1%80%EF%BC%88%E4%BA%8C%EF%BC%89/Java%E5%BC%82%E5%B8%B8%E7%B1%BB%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84%E5%9B%BE.jpg">
+<meta property="article:published_time" content="2020-04-29T02:29:23.000Z">
+<meta property="article:modified_time" content="2020-04-29T07:34:31.407Z">
 <meta property="article:author" content="Akuma">
 <meta property="article:tag" content="Java基础">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://github.com/cenganhui/Blog_Image/raw/master/Java%E5%9F%BA%E7%A1%80%EF%BC%88%E4%BA%8C%EF%BC%89/Java%E7%BA%BF%E7%A8%8B%E7%8A%B6%E6%80%81%E5%8F%98%E8%BF%81.png">
   
     <link rel="alternative" href="/atom.xml" title="Akuma Blog" type="application/atom+xml">
   
@@ -155,184 +158,103 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-test2" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Java基础（二）" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Java基础（一）
+      Java基础（二）
     </h1>
   
 
         
-        <a href="/2020/04/28/test2/" class="archive-article-date">
-  	<time datetime="2020-04-28T12:54:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-28</time>
+        <a href="/2020/04/29/Java%E5%9F%BA%E7%A1%80%EF%BC%88%E4%BA%8C%EF%BC%89/" class="archive-article-date">
+  	<time datetime="2020-04-29T02:29:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-29</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Java语言的特点"><a href="#Java语言的特点" class="headerlink" title="Java语言的特点"></a>Java语言的特点</h2><ol>
-<li>简单</li>
-<li>面向对象（封装、继承、多态）</li>
-<li>平台无关（JVM实现）</li>
-<li>可靠</li>
-<li>安全</li>
-<li>支持多线程</li>
-<li>支持网络编程</li>
-<li>编译与解释并存<a id="more"></a>
-<h2 id="JVM、JDK和JRE"><a href="#JVM、JDK和JRE" class="headerlink" title="JVM、JDK和JRE"></a>JVM、JDK和JRE</h2></li>
-</ol>
-<ul>
-<li>JVM：Java虚拟机，是运行Java字节码的虚拟机。<ul>
-<li>Java程序从源代码到运行一般有下面3步：</li>
-<li>.java文件–JDK中javac编译–&gt;.class文件–JVM–&gt;机器可执行的二进制码</li>
+        <p>Java基础（二）</p>
+<a id="more"></a>
+
+<h2 id="线程、进程、程序的基本概念"><a href="#线程、进程、程序的基本概念" class="headerlink" title="线程、进程、程序的基本概念"></a>线程、进程、程序的基本概念</h2><ul>
+<li>进程：进程是系统资源分配的基本单位，动态。</li>
+<li>线程：线程是程序执行的基本单位，动态。</li>
+<li>程序：是含有指令和数据的文件，静态代码。</li>
 </ul>
-</li>
-<li>JDK：JavaDevelopment Kit，开发工具包。</li>
-<li>JRE：Java运行时环境。</li>
-</ul>
-<h2 id="Java基本类型所占存储空间大小"><a href="#Java基本类型所占存储空间大小" class="headerlink" title="Java基本类型所占存储空间大小"></a>Java基本类型所占存储空间大小</h2><table>
+<h2 id="线程的基本状态"><a href="#线程的基本状态" class="headerlink" title="线程的基本状态"></a>线程的基本状态</h2><table>
 <thead>
 <tr>
-<th>基本类型</th>
-<th>大小</th>
-<th>最小值</th>
-<th>最大值</th>
-<th>包装类</th>
+<th>状态名称</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>boolean</td>
-<td>？</td>
-<td>？</td>
-<td>？</td>
-<td>Boolean</td>
+<td>NEW</td>
+<td>初始状态，线程被构建，但是还没有调用start()方法</td>
 </tr>
 <tr>
-<td>char</td>
-<td>16bit</td>
-<td>0</td>
-<td>2^16-1</td>
-<td>Character</td>
+<td>RUNNABLE</td>
+<td>运行状态，Java线程将操作系统中的就绪和运行两种状态统称为“运行中”</td>
 </tr>
 <tr>
-<td>byte</td>
-<td>8bit</td>
-<td>-128</td>
-<td>+127</td>
-<td>Byte</td>
+<td>BLOCKED</td>
+<td>阻塞状态，表示线程阻塞于锁</td>
 </tr>
 <tr>
-<td>short</td>
-<td>16bit</td>
-<td>-2^15</td>
-<td>+2^15</td>
-<td>Short</td>
+<td>WAITING</td>
+<td>等待状态，表示线程进入等待状态，进入该状态表示当前线程需要等待其他线程做出一些特定动作（通知或中断）</td>
 </tr>
 <tr>
-<td>int</td>
-<td>32bit</td>
-<td>-2^31</td>
-<td>+2^31-1</td>
-<td>Integer</td>
+<td>TIME_WAITING</td>
+<td>超时等待状态，该状态不同于WAITING，它是可以在指定的时间自行返回的</td>
 </tr>
 <tr>
-<td>long</td>
-<td>64bit</td>
-<td>-2^63+2^63-1</td>
-<td>Long</td>
-<td></td>
-</tr>
-<tr>
-<td>float</td>
-<td>32bit</td>
-<td>IEEE754</td>
-<td>IEEE754</td>
-<td>Float</td>
-</tr>
-<tr>
-<td>double</td>
-<td>64bit</td>
-<td>IEEE754</td>
-<td>IEEE754</td>
-<td>Double</td>
-</tr>
-<tr>
-<td>void</td>
-<td>?</td>
-<td>?</td>
-<td>?</td>
-<td>Void</td>
+<td>TERMINATED</td>
+<td>终止状态，表示当前线程已经执行完毕</td>
 </tr>
 </tbody></table>
-<h2 id="重载与重写的区别"><a href="#重载与重写的区别" class="headerlink" title="重载与重写的区别"></a>重载与重写的区别</h2><ul>
-<li>重载：发生在同一个类中，方法名必须相同，参数类型不同、个数不同、顺序不同，方法返回值和访问修饰符可以不同。</li>
-<li>重写：子类对父类的允许访问的方法的实现过程进行重新编写，发生在子类中，方法名、参数列表必须相同，返回值范围&lt;=父类，抛出异常范围&lt;=父类，访问修饰符范围&gt;=父类，若父类方法是private，则子类不能重写。</li>
-</ul>
-<h2 id="Java面向对象的三大特性"><a href="#Java面向对象的三大特性" class="headerlink" title="Java面向对象的三大特性"></a>Java面向对象的三大特性</h2><ul>
-<li><strong>封装</strong><ul>
-<li>把对象的属性私有化，同时提供一些可以被外界访问属性的方法。</li>
-</ul>
-</li>
-<li><strong>继承</strong><ul>
-<li>使用已存在的类的定义作为基础类建立新的类。<ol>
-<li>子类拥有父类对象的所有属性和方法（包括私有的），但父类中的私有子类是无法访问的，<strong>只是拥有</strong>。</li>
-<li>子类可以拥有自己的属性和方法，即对父类拓展。</li>
-<li>子类可以用自己的方式实现父类的方法（重写）。</li>
+<h2 id="Java线程状态变迁"><a href="#Java线程状态变迁" class="headerlink" title="Java线程状态变迁"></a>Java线程状态变迁</h2><p><img src="http://github.com/cenganhui/Blog_Image/raw/master/Java%E5%9F%BA%E7%A1%80%EF%BC%88%E4%BA%8C%EF%BC%89/Java%E7%BA%BF%E7%A8%8B%E7%8A%B6%E6%80%81%E5%8F%98%E8%BF%81.png" alt="Java线程状态变迁"></p>
+<h2 id="final关键字"><a href="#final关键字" class="headerlink" title="final关键字"></a>final关键字</h2><h3 id="final关键字主要用在三个地方：变量、类、方法"><a href="#final关键字主要用在三个地方：变量、类、方法" class="headerlink" title="final关键字主要用在三个地方：变量、类、方法"></a>final关键字主要用在三个地方：变量、类、方法</h3><ol>
+<li>对于一个final变量，如果是基本数据类型的变量，其数值一旦初始化，之后就不能更改；如果是引用类型的变量，则其初始化后就不能让其指向另一个对象。</li>
+<li>当用final修饰一个类，表示这个类不能被继承。fianl类中的所有成员方法都会被隐式地指定为final方法。</li>
+<li>使用final修饰方法的原因有两个：<ol>
+<li>把方法锁定，以防任何继承类修改它的含义。</li>
+<li>提高效率（早期Java版本）。</li>
 </ol>
 </li>
-</ul>
-</li>
-<li><strong>多态</strong><ul>
-<li>一个引用变量到底会指向哪个类的实例对象，该引用变量发出的方法调用到底是哪个类中实现的方法，必须在由程序运行期间才能决定。</li>
-</ul>
-</li>
-</ul>
-<h2 id="String、StringBuffer和StringBuilder"><a href="#String、StringBuffer和StringBuilder" class="headerlink" title="String、StringBuffer和StringBuilder"></a>String、StringBuffer和StringBuilder</h2><ul>
-<li><strong>可变性</strong>：String使用final关键字修饰char数组，所以String对象是不可变的。而StringBuffer和StringBuilder没有使用final修饰，因此可变。</li>
-<li><strong>线程安全性</strong>：<ul>
-<li>String对象不可变，安全。</li>
-<li>StringBuffer对方法加锁，安全。</li>
-<li>StringBuilder没有加锁，不安全。</li>
-</ul>
-</li>
-</ul>
-<h2 id="自动装箱与拆箱"><a href="#自动装箱与拆箱" class="headerlink" title="自动装箱与拆箱"></a>自动装箱与拆箱</h2><ul>
-<li>装箱：基本类型-&gt;包装类</li>
-<li>拆箱：包装类-&gt;基本类型</li>
-</ul>
-<h2 id="接口和抽象类的区别"><a href="#接口和抽象类的区别" class="headerlink" title="接口和抽象类的区别"></a>接口和抽象类的区别</h2><ol>
-<li>接口的方法默认public，不能有实现（Java 8接口方法有默认实现），抽象类可以有非抽象方法。</li>
-<li>接口中除了static、final变量，不能有其他变量，抽象类则不一定。</li>
-<li>一个类可以实现多个接口，但只能继承一个抽象类。</li>
-<li>接口方法默认修饰符是public，抽象方法可以有public、protected和default。</li>
-<li>抽象是对类的抽象，是一种模板设计，接口是对行为的抽象，是一种行为规范。</li>
 </ol>
-<h2 id="与equals"><a href="#与equals" class="headerlink" title="==与equals()"></a>==与equals()</h2><ul>
-<li><strong>==</strong>：判断两个对象的地址是否相等，即判断两个对象是不是同一个对象。（基本数据类型==比较的是值，引用数据类型==比较的是内存地址）</li>
-<li><strong>equals()</strong>：判断两个对象是否相等。一般有两种情况：<ol>
-<li>类没有重写equals()，则通过equals()比较两个对象时，等价于“==”比较这两个对象。</li>
-<li>类重写equals()。重写一般是来比较两个对象的内容是否相等，相等返回true。<h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">String a = <span class="keyword">new</span> String(<span class="string">"ab"</span>);  <span class="comment">//a为一个引用</span></span><br><span class="line">String b = <span class="keyword">new</span> String(<span class="string">"ab"</span>);  <span class="comment">//b为另一个引用，对象的内容一样</span></span><br><span class="line">String aa = <span class="string">"ab"</span>; <span class="comment">//放在常量池中</span></span><br><span class="line">String bb = <span class="string">"ab"</span>; <span class="comment">//从常量池中查找</span></span><br><span class="line"><span class="keyword">if</span>(aa == bb)   <span class="comment">//true，同一个对象</span></span><br><span class="line"><span class="keyword">if</span>(a == b)     <span class="comment">//false，不是同一个对象</span></span><br><span class="line"><span class="keyword">if</span>(a.equals(b));  <span class="comment">//true</span></span><br><span class="line"><span class="keyword">if</span>(<span class="number">42</span> == <span class="number">42.0</span>) <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
-<h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3></li>
-</ol>
-</li>
-<li>String中equals()方法被重写过，Object的equals()比较的是对象的内存地址，String中的equals()比较的是对象的内容。</li>
+<h2 id="Java中的异常处理"><a href="#Java中的异常处理" class="headerlink" title="Java中的异常处理"></a>Java中的异常处理</h2><h3 id="Java异常类层次结构图"><a href="#Java异常类层次结构图" class="headerlink" title="Java异常类层次结构图"></a>Java异常类层次结构图</h3><p><img src="http://github.com/cenganhui/Blog_Image/raw/master/Java%E5%9F%BA%E7%A1%80%EF%BC%88%E4%BA%8C%EF%BC%89/Java%E5%BC%82%E5%B8%B8%E7%B1%BB%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84%E5%9B%BE.jpg" alt="Java异常类层次结构图"></p>
+<p><strong>Error（错误）</strong>：是程序无法处理的错误，表示运行应用程序中较严重的问题。大多数错误与代码编写者执行的操作无关，而表示代码运行时JVM出现的问题。<br><strong>Exception（异常）</strong>：是程序本身可以处理的异常。<br><strong>错误和异常的区别</strong>：异常能被程序本身处理，错误是无法处理的。</p>
+<h3 id="异常处理总结"><a href="#异常处理总结" class="headerlink" title="异常处理总结"></a>异常处理总结</h3><ul>
+<li><strong>try块</strong>：用于捕获异常，后可接0个或多个catch快，如果没有catch块，则必须跟一个finally块。</li>
+<li><strong>catch块</strong>：用于处理try块捕获到的异常。</li>
+<li><strong>finally块</strong>：无论是否捕获或处理异常，finally块里的语句都会被执行。当在try块或catch块中遇到return语句时，finally块将在方法返回之前被执行。<h3 id="finally块不会被执行的情况："><a href="#finally块不会被执行的情况：" class="headerlink" title="finally块不会被执行的情况："></a>finally块不会被执行的情况：</h3></li>
 </ul>
-<h2 id="hashCode与equals"><a href="#hashCode与equals" class="headerlink" title="hashCode与equals"></a>hashCode与equals</h2><ul>
-<li><strong>hashCode()</strong>：作用是获取哈希码，也称散列码。返回的是一个int，确定对象在哈希表中的索引位置。</li>
-<li><strong>具体作用</strong>：“以HashSet如何检查重复”为例，当把对象加入HashSet时，先计算对象的hashCode来判断对象的加入位置，同时也会与该位置其他已经加入的对象的hashCode作比较，如果没有相等的hashCode，HashSet会假设对象没有重复出现。但如果发现有相同hashCode的对象，这是会调用equals()来检查hashCode相等的对象是否真的相同（是否是同一个对象）。如果相同，就加入失败。如果不同，就会重新散列到其他位置，这样就减少了equals()的次数，提高了执行效率。</li>
-<li><strong>hashCode()与equals()的相关规定</strong><ol>
-<li>如果两个对象相等，则hashCode一定相同。</li>
-<li>两个对象相等，对两个对象调用equals()返回true。</li>
-<li>两个对象的hashC相同，它们不一定相等。</li>
-<li>如果equals()被重写，则hashCode()也必须被重写。</li>
-<li>hashCode()默认对堆上的对象产生独特值，如果没有重写hashCode()，则该class的两个对象无论如何都不会相等。（即使两个对象内容相等）</li>
+<ol>
+<li>在finally块第一行发生了异常。</li>
+<li>在前面的代码中用了System.exit(int)退出程序。</li>
+<li>程序所在线程终止。</li>
+<li>关闭CPU。</li>
 </ol>
-</li>
+<h2 id="Java序列化中如果有些字段不想进行序列化"><a href="#Java序列化中如果有些字段不想进行序列化" class="headerlink" title="Java序列化中如果有些字段不想进行序列化"></a>Java序列化中如果有些字段不想进行序列化</h2><p>对这些变量，使用<strong>transient</strong>关键字修饰，只能修饰变量，不能修饰类和方法。</p>
+<h2 id="Java中IO流"><a href="#Java中IO流" class="headerlink" title="Java中IO流"></a>Java中IO流</h2><h3 id="IO流分类"><a href="#IO流分类" class="headerlink" title="IO流分类"></a>IO流分类</h3><ul>
+<li>按流向：输入流、输出流</li>
+<li>按操作单元：字节流、字符流</li>
+<li>按流的角色：节点流、处理流</li>
+</ul>
+<h2 id="BIO、NIO、AIO"><a href="#BIO、NIO、AIO" class="headerlink" title="BIO、NIO、AIO"></a>BIO、NIO、AIO</h2><ul>
+<li><strong>BIO(Blocking I/O)</strong>：同步阻塞I/O模式，数据的读写必须阻塞在一个线程内等待其完成。使用Socket和ServerSocket。适用于低负载、低并发。</li>
+<li><strong>NIO(Non-blocking/New I/O)</strong>：同步非阻塞I/O模型，对应java.nio包，提供Channel、Selector、Buffer等抽象。它支持面向缓冲的，基于通道的I/O操作方法。使用SocketChannel和ServerSocketChannel。适用于高负载、高并发。</li>
+<li><strong>AIO(Asynchronous I/O)</strong>：NIO 2，异步非阻塞I/O模型，基于事件和回调机制，应用操作之后会直接返回，不会阻塞在那里，当后台处理完成，操作系统会通知相应的线程进行后续的操作。</li>
+</ul>
+<h2 id="浅复制、深复制"><a href="#浅复制、深复制" class="headerlink" title="浅复制、深复制"></a>浅复制、深复制</h2><ul>
+<li><strong>浅复制</strong>：对基本数据类型进行值传递，对引用数据类型进行引用专递般的复制，这就是浅复制。</li>
+<li><strong>深复制</strong>：对基本数据类型进行值传递，对引用数据类型，创建一个新的对象，并复制其内容，这就是深复制。</li>
 </ul>
 
       
@@ -414,7 +336,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://cenganhui.github.io/2020/04/28/test2/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://cenganhui.github.io/2020/04/29/Java%E5%9F%BA%E7%A1%80%EF%BC%88%E4%BA%8C%EF%BC%89/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -428,18 +350,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/04/29/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%EF%BC%88%E4%B8%80%EF%BC%89/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/04/29/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          排序算法（一）
+          设计模式
         
       </div>
     </a>
   
   
-    <a href="/2020/04/28/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">我的第一篇博客</div>
+    <a href="/2020/04/29/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%EF%BC%88%E4%B8%80%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">排序算法（一）</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -466,7 +388,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Java语言的特点"><span class="toc-number">1.</span> <span class="toc-text">Java语言的特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JVM、JDK和JRE"><span class="toc-number">2.</span> <span class="toc-text">JVM、JDK和JRE</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java基本类型所占存储空间大小"><span class="toc-number">3.</span> <span class="toc-text">Java基本类型所占存储空间大小</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#重载与重写的区别"><span class="toc-number">4.</span> <span class="toc-text">重载与重写的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java面向对象的三大特性"><span class="toc-number">5.</span> <span class="toc-text">Java面向对象的三大特性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#String、StringBuffer和StringBuilder"><span class="toc-number">6.</span> <span class="toc-text">String、StringBuffer和StringBuilder</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#自动装箱与拆箱"><span class="toc-number">7.</span> <span class="toc-text">自动装箱与拆箱</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#接口和抽象类的区别"><span class="toc-number">8.</span> <span class="toc-text">接口和抽象类的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#与equals"><span class="toc-number">9.</span> <span class="toc-text">&#x3D;&#x3D;与equals()</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#例子"><span class="toc-number">9.1.</span> <span class="toc-text">例子</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#说明"><span class="toc-number">9.2.</span> <span class="toc-text">说明</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hashCode与equals"><span class="toc-number">10.</span> <span class="toc-text">hashCode与equals</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#线程、进程、程序的基本概念"><span class="toc-number">1.</span> <span class="toc-text">线程、进程、程序的基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#线程的基本状态"><span class="toc-number">2.</span> <span class="toc-text">线程的基本状态</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java线程状态变迁"><span class="toc-number">3.</span> <span class="toc-text">Java线程状态变迁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#final关键字"><span class="toc-number">4.</span> <span class="toc-text">final关键字</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#final关键字主要用在三个地方：变量、类、方法"><span class="toc-number">4.1.</span> <span class="toc-text">final关键字主要用在三个地方：变量、类、方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java中的异常处理"><span class="toc-number">5.</span> <span class="toc-text">Java中的异常处理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Java异常类层次结构图"><span class="toc-number">5.1.</span> <span class="toc-text">Java异常类层次结构图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#异常处理总结"><span class="toc-number">5.2.</span> <span class="toc-text">异常处理总结</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#finally块不会被执行的情况："><span class="toc-number">5.3.</span> <span class="toc-text">finally块不会被执行的情况：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java序列化中如果有些字段不想进行序列化"><span class="toc-number">6.</span> <span class="toc-text">Java序列化中如果有些字段不想进行序列化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java中IO流"><span class="toc-number">7.</span> <span class="toc-text">Java中IO流</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#IO流分类"><span class="toc-number">7.1.</span> <span class="toc-text">IO流分类</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BIO、NIO、AIO"><span class="toc-number">8.</span> <span class="toc-text">BIO、NIO、AIO</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#浅复制、深复制"><span class="toc-number">9.</span> <span class="toc-text">浅复制、深复制</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -575,6 +497,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">排序算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
               </li>
             
             <div class="clearfix"></div>
