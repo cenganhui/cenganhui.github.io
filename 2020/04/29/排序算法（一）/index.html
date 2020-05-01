@@ -16,7 +16,7 @@
 <meta property="og:description" content="冒泡排序、堆排序、插入排序、归并排序">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-04-29T00:15:57.000Z">
-<meta property="article:modified_time" content="2020-04-29T02:35:46.624Z">
+<meta property="article:modified_time" content="2020-05-01T11:37:14.911Z">
 <meta property="article:author" content="Akuma">
 <meta property="article:tag" content="排序算法">
 <meta name="twitter:card" content="summary">
@@ -181,18 +181,18 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">BubbleSort</span><span class="params">(<span class="keyword">int</span>[] arr)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> temp = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">boolean</span> flag = <span class="keyword">false</span>;   <span class="comment">//标识，表示是否进行过交换</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;arr.length;i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;arr.length-i-<span class="number">1</span>;j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(arr[j]&gt;arr[j+<span class="number">1</span>])&#123;    <span class="comment">//若前数&gt;后数，则交换</span></span><br><span class="line">                flag = <span class="keyword">true</span>;    <span class="comment">//true表示进行过交换</span></span><br><span class="line">                temp = arr[j];</span><br><span class="line">                arr[j] = arr[j+<span class="number">1</span>];</span><br><span class="line">                arr[j+<span class="number">1</span>] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(!flag)&#123;  <span class="comment">//如果一趟排序里面没有进行过交换，证明已经有序</span></span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            flag = <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h1 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h1><h3 id="平均时间复杂度O-nlogn-空间复杂度O-1-最好情况O-nlogn-最坏情况O-nlogn-不稳定"><a href="#平均时间复杂度O-nlogn-空间复杂度O-1-最好情况O-nlogn-最坏情况O-nlogn-不稳定" class="headerlink" title="平均时间复杂度O(nlogn) 空间复杂度O(1) 最好情况O(nlogn) 最坏情况O(nlogn) 不稳定"></a>平均时间复杂度O(nlogn) 空间复杂度O(1) 最好情况O(nlogn) 最坏情况O(nlogn) 不稳定</h3><h3 id="流程：-1"><a href="#流程：-1" class="headerlink" title="流程："></a>流程：</h3><ol>
-<li>将无序序列构成一个堆，根据升序降序需求选择大顶堆或小顶堆。</li>
+<li>将无序序列构成一个堆，根据<code>升序``降序</code>需求选择<code>大顶堆</code>或<code>小顶堆</code>。</li>
 <li>将堆顶元素与末尾元素交换，将最大元素“沉”到数组末端。</li>
 <li>重新调整结构，使其满足堆定义，然后继续交换堆顶元素与当前末尾元素。</li>
-<li>反复执行调整+交换步骤，直到整个序列有序。</li>
+<li>反复执行<code>调整</code>+<code>交换</code>步骤，直到整个序列有序。</li>
 </ol>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">heapSort</span><span class="params">(<span class="keyword">int</span>[] arr)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> temp = <span class="number">0</span>;</span><br><span class="line">    <span class="comment">//第一次对整个无序数组调整成大顶堆</span></span><br><span class="line">    <span class="comment">//从最后一个非叶子节点(arr.length/2-1 =&gt; 整个树的最后一个非叶子节点)，从右到左，从下到上</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=arr.length/<span class="number">2</span>-<span class="number">1</span>;i&gt;=<span class="number">0</span>;i--)&#123;</span><br><span class="line">        adjustHead(arr,i,arr.length);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j=arr.length-<span class="number">1</span>;j&gt;<span class="number">0</span>;j--)&#123;</span><br><span class="line">        <span class="comment">//交换：此时第一个（堆顶）为最大值，交换到末尾</span></span><br><span class="line">        temp = arr[<span class="number">0</span>];</span><br><span class="line">        arr[<span class="number">0</span>] = arr[j];</span><br><span class="line">        arr[j] = temp;</span><br><span class="line">        <span class="comment">//交换后末尾元素不用再管，只有堆顶改变了</span></span><br><span class="line">        <span class="comment">//只有堆顶不合格，其他都符合最大堆，只要把堆顶排到它适合的位置就好了</span></span><br><span class="line">        <span class="comment">//每次堆数组的长度都逐渐减小</span></span><br><span class="line">        adjustHead(arr,<span class="number">0</span>,j);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 功能：将以i对应的非叶子结点的树调整成大顶堆</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> arr 	 待调整的数组</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> i		 表示非叶子结点在数组中的索引</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> length 表示对多少个元素进行调整，length逐渐减小</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">adjustHead</span><span class="params">(<span class="keyword">int</span>[] arr,<span class="keyword">int</span> i,<span class="keyword">int</span> length)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> temp = arr[i];  <span class="comment">//暂存当前值</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> k=i*<span class="number">2</span>+<span class="number">1</span>;k&lt;length;k=k*<span class="number">2</span>+<span class="number">1</span>)&#123; <span class="comment">//k从i的左子节点开始(k=k*2+1 =&gt; k变成k的左子节点)</span></span><br><span class="line">        <span class="keyword">if</span>(k+<span class="number">1</span>&lt;length &amp;&amp; arr[k]&lt;arr[k+<span class="number">1</span>])&#123; <span class="comment">//比较i的左子节点和右子节点的大小</span></span><br><span class="line">            k++; <span class="comment">//k指向较大的节点</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(arr[k] &gt; temp)&#123; <span class="comment">//判断较大节点和i的值的大小</span></span><br><span class="line">            arr[i] = arr[k]; <span class="comment">//若比i大，则大的值赋值给i</span></span><br><span class="line">            i = k; <span class="comment">//i指向k，继续往下循环比较</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123; <span class="comment">//若比i小，则跳出（因为调整是从最后一个非叶子节点开始的）</span></span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//当for完了，就已经将以i为父节点的树的最大值放在了最顶部（局部）</span></span><br><span class="line">    arr[i] = temp; <span class="comment">//将temp值放到调整后的位置</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h1 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h1><h3 id="平均时间复杂度O-n²-空间复杂度O-1-最好情况O-n-最坏情况O-n²-稳定-1"><a href="#平均时间复杂度O-n²-空间复杂度O-1-最好情况O-n-最坏情况O-n²-稳定-1" class="headerlink" title="平均时间复杂度O(n²) 空间复杂度O(1) 最好情况O(n) 最坏情况O(n²) 稳定"></a>平均时间复杂度O(n²) 空间复杂度O(1) 最好情况O(n) 最坏情况O(n²) 稳定</h3><h3 id="流程：-2"><a href="#流程：-2" class="headerlink" title="流程："></a>流程：</h3><ol>
-<li>将数组分为有序区和无序区。</li>
-<li>第一轮的有序区就是[0]。</li>
+<li>将数组分为<code>有序区</code>和<code>无序区</code>。</li>
+<li>第一轮的有序区就是<code>[0]</code>。</li>
 <li>每一轮从无序区中取第一个数与整个有序区的数从后往前进行比较。</li>
-<li>找到适当的插入位置插入，有序区+1，无序区-1。</li>
+<li>找到适当的插入位置插入，<code>有序区+1</code>，<code>无序区-1</code>。</li>
 </ol>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">insertSort</span><span class="params">(<span class="keyword">int</span>[] arr)</span></span>&#123;</span><br><span class="line">    <span class="comment">//进行n-1轮插入</span></span><br><span class="line">    <span class="keyword">int</span> insertVal = o;</span><br><span class="line">    <span class="keyword">int</span> insertIndex = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;arr.length;i++)&#123;</span><br><span class="line">        insertVal = arr[i]; <span class="comment">//存放无序区第一个数</span></span><br><span class="line">        insertIndex = i-<span class="number">1</span>; <span class="comment">//无序区的前一个数，即有序区的最后一个数</span></span><br><span class="line">        <span class="comment">//给insertVal找到插入位置</span></span><br><span class="line">        <span class="comment">//1.insertIndex不能越界</span></span><br><span class="line">        <span class="comment">//2.arr[insertIndex]&gt;insetVal表示还没有找到插入位置（改为&lt;就是从小到大）</span></span><br><span class="line">        <span class="comment">//3.若没找到，则将insertIndex的值赋值给后一位，即值往后移</span></span><br><span class="line">        <span class="keyword">while</span>(insertIndex&gt;=<span class="number">0</span> &amp;&amp; arr[insertIndex]&gt;insertVal)&#123;</span><br><span class="line">            arr[insertIndex+<span class="number">1</span>] = arr[insertIndex];</span><br><span class="line">            insertIndex--;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//当循环结束，就找到了位置insertIndex+1</span></span><br><span class="line">        <span class="comment">//即待插入数&gt;arr[insertIndex]或者insertIndex=-1，因此插入到它的后面一位</span></span><br><span class="line">        arr[insertIndex+<span class="number">1</span>] = insertVal;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -200,9 +200,9 @@
 <li>分阶段：将数组进行划分，直到不能再划分。</li>
 <li>治阶段：<ol>
 <li>将已有序的子序列进行两两合并。</li>
-<li>遍历两个合并的子序列，按规则填充到temp数组中。</li>
-<li>填充完毕后temp数组中就是两个有序子序列合并后的有序序列。</li>
-<li>将temp数组中的元素复制回原数组的相应区间中。</li>
+<li>遍历两个合并的子序列，按规则填充到<code>temp</code>数组中。</li>
+<li>填充完毕后<code>temp</code>数组中就是两个有序子序列合并后的有序序列。</li>
+<li>将<code>temp</code>数组中的元素复制回原数组的相应区间中。</li>
 </ol>
 </li>
 </ul>
@@ -446,19 +446,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Spring</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">排序算法</a>
+                <a href="javascript:void(0)" class="js-tag color2">Spring</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">计算机网络</a>
+                <a href="javascript:void(0)" class="js-tag color5">排序算法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -467,6 +463,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">代理模式</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">计算机网络</a>
               </li>
              
               <li class="article-tag-list-item">

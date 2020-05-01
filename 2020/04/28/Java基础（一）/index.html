@@ -16,7 +16,7 @@
 <meta property="og:description" content="Java基础（一）">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-04-28T12:54:07.000Z">
-<meta property="article:modified_time" content="2020-04-29T02:35:34.228Z">
+<meta property="article:modified_time" content="2020-05-01T11:39:58.223Z">
 <meta property="article:author" content="Akuma">
 <meta property="article:tag" content="Java基础">
 <meta name="twitter:card" content="summary">
@@ -294,11 +294,11 @@
 </li>
 </ul>
 <h2 id="String、StringBuffer和StringBuilder"><a href="#String、StringBuffer和StringBuilder" class="headerlink" title="String、StringBuffer和StringBuilder"></a>String、StringBuffer和StringBuilder</h2><ul>
-<li><strong>可变性</strong>：String使用final关键字修饰char数组，所以String对象是不可变的。而StringBuffer和StringBuilder没有使用final修饰，因此可变。</li>
+<li><strong>可变性</strong>：<code>String</code>使用<code>final</code>关键字修饰char数组，所以<code>String</code>对象是不可变的。而<code>StringBuffer</code>和<code>StringBuilder</code>没有使用final修饰，因此可变。</li>
 <li><strong>线程安全性</strong>：<ul>
-<li>String对象不可变，安全。</li>
-<li>StringBuffer对方法加锁，安全。</li>
-<li>StringBuilder没有加锁，不安全。</li>
+<li><code>String</code>对象不可变，安全。</li>
+<li><code>StringBuffer</code>对方法加锁，安全。</li>
+<li><code>StringBuilder</code>没有加锁，不安全。</li>
 </ul>
 </li>
 </ul>
@@ -307,17 +307,17 @@
 <li>拆箱：包装类-&gt;基本类型</li>
 </ul>
 <h2 id="接口和抽象类的区别"><a href="#接口和抽象类的区别" class="headerlink" title="接口和抽象类的区别"></a>接口和抽象类的区别</h2><ol>
-<li>接口的方法默认public，不能有实现（Java 8接口方法有默认实现），抽象类可以有非抽象方法。</li>
-<li>接口中除了static、final变量，不能有其他变量，抽象类则不一定。</li>
+<li>接口的方法默认<code>public</code>，不能有实现（Java 8接口方法有默认实现），抽象类可以有非抽象方法。</li>
+<li>接口中除了<code>static</code>、<code>final</code>变量，不能有其他变量，抽象类则不一定。</li>
 <li>一个类可以实现多个接口，但只能继承一个抽象类。</li>
-<li>接口方法默认修饰符是public，抽象方法可以有public、protected和default。</li>
+<li>接口方法默认修饰符是<code>public</code>，抽象方法可以有<code>public</code>、<code>protected</code>和<code>default</code>。</li>
 <li>抽象是对类的抽象，是一种模板设计，接口是对行为的抽象，是一种行为规范。</li>
 </ol>
 <h2 id="与equals"><a href="#与equals" class="headerlink" title="==与equals()"></a>==与equals()</h2><ul>
 <li><strong>==</strong>：判断两个对象的地址是否相等，即判断两个对象是不是同一个对象。（基本数据类型==比较的是值，引用数据类型==比较的是内存地址）</li>
 <li><strong>equals()</strong>：判断两个对象是否相等。一般有两种情况：<ol>
-<li>类没有重写equals()，则通过equals()比较两个对象时，等价于“==”比较这两个对象。</li>
-<li>类重写equals()。重写一般是来比较两个对象的内容是否相等，相等返回true。<h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">String a = <span class="keyword">new</span> String(<span class="string">"ab"</span>);  <span class="comment">//a为一个引用</span></span><br><span class="line">String b = <span class="keyword">new</span> String(<span class="string">"ab"</span>);  <span class="comment">//b为另一个引用，对象的内容一样</span></span><br><span class="line">String aa = <span class="string">"ab"</span>; <span class="comment">//放在常量池中</span></span><br><span class="line">String bb = <span class="string">"ab"</span>; <span class="comment">//从常量池中查找</span></span><br><span class="line"><span class="keyword">if</span>(aa == bb)   <span class="comment">//true，同一个对象</span></span><br><span class="line"><span class="keyword">if</span>(a == b)     <span class="comment">//false，不是同一个对象</span></span><br><span class="line"><span class="keyword">if</span>(a.equals(b));  <span class="comment">//true</span></span><br><span class="line"><span class="keyword">if</span>(<span class="number">42</span> == <span class="number">42.0</span>) <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+<li>类没有重写<code>equals()</code>，则通过<code>equals()</code>比较两个对象时，等价于“==”比较这两个对象。</li>
+<li>类重写<code>equals()</code>。重写一般是来比较两个对象的内容是否相等，相等返回<code>true</code>。<h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">String a = <span class="keyword">new</span> String(<span class="string">"ab"</span>);  <span class="comment">//a为一个引用</span></span><br><span class="line">String b = <span class="keyword">new</span> String(<span class="string">"ab"</span>);  <span class="comment">//b为另一个引用，对象的内容一样</span></span><br><span class="line">String aa = <span class="string">"ab"</span>; <span class="comment">//放在常量池中</span></span><br><span class="line">String bb = <span class="string">"ab"</span>; <span class="comment">//从常量池中查找</span></span><br><span class="line"><span class="keyword">if</span>(aa == bb)   <span class="comment">//true，同一个对象</span></span><br><span class="line"><span class="keyword">if</span>(a == b)     <span class="comment">//false，不是同一个对象</span></span><br><span class="line"><span class="keyword">if</span>(a.equals(b));  <span class="comment">//true</span></span><br><span class="line"><span class="keyword">if</span>(<span class="number">42</span> == <span class="number">42.0</span>) <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
 <h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3></li>
 </ol>
 </li>
@@ -570,19 +570,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Spring</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">排序算法</a>
+                <a href="javascript:void(0)" class="js-tag color2">Spring</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">计算机网络</a>
+                <a href="javascript:void(0)" class="js-tag color5">排序算法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -591,6 +587,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">代理模式</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">计算机网络</a>
               </li>
              
               <li class="article-tag-list-item">

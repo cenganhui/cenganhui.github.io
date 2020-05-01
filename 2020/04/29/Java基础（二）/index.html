@@ -18,7 +18,7 @@
 <meta property="og:image" content="http://github.com/cenganhui/Blog_Image/raw/master/Java%E5%9F%BA%E7%A1%80%EF%BC%88%E4%BA%8C%EF%BC%89/Java%E7%BA%BF%E7%A8%8B%E7%8A%B6%E6%80%81%E5%8F%98%E8%BF%81.png">
 <meta property="og:image" content="http://github.com/cenganhui/Blog_Image/raw/master/Java%E5%9F%BA%E7%A1%80%EF%BC%88%E4%BA%8C%EF%BC%89/Java%E5%BC%82%E5%B8%B8%E7%B1%BB%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84%E5%9B%BE.jpg">
 <meta property="article:published_time" content="2020-04-29T02:29:23.000Z">
-<meta property="article:modified_time" content="2020-04-29T07:34:31.407Z">
+<meta property="article:modified_time" content="2020-05-01T11:38:42.003Z">
 <meta property="article:author" content="Akuma">
 <meta property="article:tag" content="Java基础">
 <meta name="twitter:card" content="summary">
@@ -220,9 +220,9 @@
 </tbody></table>
 <h2 id="Java线程状态变迁"><a href="#Java线程状态变迁" class="headerlink" title="Java线程状态变迁"></a>Java线程状态变迁</h2><p><img src="http://github.com/cenganhui/Blog_Image/raw/master/Java%E5%9F%BA%E7%A1%80%EF%BC%88%E4%BA%8C%EF%BC%89/Java%E7%BA%BF%E7%A8%8B%E7%8A%B6%E6%80%81%E5%8F%98%E8%BF%81.png" alt="Java线程状态变迁"></p>
 <h2 id="final关键字"><a href="#final关键字" class="headerlink" title="final关键字"></a>final关键字</h2><h3 id="final关键字主要用在三个地方：变量、类、方法"><a href="#final关键字主要用在三个地方：变量、类、方法" class="headerlink" title="final关键字主要用在三个地方：变量、类、方法"></a>final关键字主要用在三个地方：变量、类、方法</h3><ol>
-<li>对于一个final变量，如果是基本数据类型的变量，其数值一旦初始化，之后就不能更改；如果是引用类型的变量，则其初始化后就不能让其指向另一个对象。</li>
-<li>当用final修饰一个类，表示这个类不能被继承。fianl类中的所有成员方法都会被隐式地指定为final方法。</li>
-<li>使用final修饰方法的原因有两个：<ol>
+<li>对于一个<code>final</code>变量，如果是基本数据类型的变量，其数值一旦初始化，之后就不能更改；如果是引用类型的变量，则其初始化后就不能让其指向另一个对象。</li>
+<li>当用<code>final</code>修饰一个类，表示这个类不能被继承。<code>fianl</code>类中的所有成员方法都会被隐式地指定为final方法。</li>
+<li>使用<code>final</code>修饰方法的原因有两个：<ol>
 <li>把方法锁定，以防任何继承类修改它的含义。</li>
 <li>提高效率（早期Java版本）。</li>
 </ol>
@@ -237,7 +237,7 @@
 </ul>
 <ol>
 <li>在finally块第一行发生了异常。</li>
-<li>在前面的代码中用了System.exit(int)退出程序。</li>
+<li>在前面的代码中用了<code>System.exit(int)</code>退出程序。</li>
 <li>程序所在线程终止。</li>
 <li>关闭CPU。</li>
 </ol>
@@ -248,8 +248,8 @@
 <li>按流的角色：节点流、处理流</li>
 </ul>
 <h2 id="BIO、NIO、AIO"><a href="#BIO、NIO、AIO" class="headerlink" title="BIO、NIO、AIO"></a>BIO、NIO、AIO</h2><ul>
-<li><strong>BIO(Blocking I/O)</strong>：同步阻塞I/O模式，数据的读写必须阻塞在一个线程内等待其完成。使用Socket和ServerSocket。适用于低负载、低并发。</li>
-<li><strong>NIO(Non-blocking/New I/O)</strong>：同步非阻塞I/O模型，对应java.nio包，提供Channel、Selector、Buffer等抽象。它支持面向缓冲的，基于通道的I/O操作方法。使用SocketChannel和ServerSocketChannel。适用于高负载、高并发。</li>
+<li><strong>BIO(Blocking I/O)</strong>：同步阻塞I/O模式，数据的读写必须阻塞在一个线程内等待其完成。使用<code>Socket</code>和<code>ServerSocket</code>。适用于低负载、低并发。</li>
+<li><strong>NIO(Non-blocking/New I/O)</strong>：同步非阻塞I/O模型，对应<code>java.nio</code>包，提供<code>Channel</code>、<code>Selector</code>、<code>Buffer</code>等抽象。它支持面向缓冲的，基于通道的I/O操作方法。使用<code>SocketChannel</code>和<code>ServerSocketChannel</code>。适用于高负载、高并发。</li>
 <li><strong>AIO(Asynchronous I/O)</strong>：NIO 2，异步非阻塞I/O模型，基于事件和回调机制，应用操作之后会直接返回，不会阻塞在那里，当后台处理完成，操作系统会通知相应的线程进行后续的操作。</li>
 </ul>
 <h2 id="浅复制、深复制"><a href="#浅复制、深复制" class="headerlink" title="浅复制、深复制"></a>浅复制、深复制</h2><ul>
@@ -496,19 +496,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Spring</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">排序算法</a>
+                <a href="javascript:void(0)" class="js-tag color2">Spring</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">计算机网络</a>
+                <a href="javascript:void(0)" class="js-tag color5">排序算法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -517,6 +513,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">代理模式</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">计算机网络</a>
               </li>
              
               <li class="article-tag-list-item">
