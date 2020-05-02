@@ -6,24 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://cenganhui.github.io">
-  <title>设计模式-原型模式 | Akuma Blog</title>
+  <title>剑指Offer-面试题46-把数字翻译成字符串 | Akuma Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="原型模式 原型模式是一种对象创建型模式，用原型实例指定创建对象的种类，并且通过复制这些原型创建新的对象。 原型模式允许通过一个原型对象创建一个或多个同类型的其他对象，而无须知道任何创建的细节。">
+  <meta name="description" content="题目描述给定一个数字，我们按照如下规则把它翻译为字符串：0翻译成a ，1翻译成b，……，11翻译成l，……，25翻译成z。一个数字可能有多个翻译。请编程实现一个函数，用来计算一个数字有多少种不同的翻译方法。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="设计模式-原型模式">
-<meta property="og:url" content="https://cenganhui.github.io/2020/04/29/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/index.html">
+<meta property="og:title" content="剑指Offer-面试题46-把数字翻译成字符串">
+<meta property="og:url" content="https://cenganhui.github.io/2020/05/02/%E5%89%91%E6%8C%87Offer-%E9%9D%A2%E8%AF%95%E9%A2%9846-%E6%8A%8A%E6%95%B0%E5%AD%97%E7%BF%BB%E8%AF%91%E6%88%90%E5%AD%97%E7%AC%A6%E4%B8%B2/index.html">
 <meta property="og:site_name" content="Akuma Blog">
-<meta property="og:description" content="原型模式 原型模式是一种对象创建型模式，用原型实例指定创建对象的种类，并且通过复制这些原型创建新的对象。 原型模式允许通过一个原型对象创建一个或多个同类型的其他对象，而无须知道任何创建的细节。">
+<meta property="og:description" content="题目描述给定一个数字，我们按照如下规则把它翻译为字符串：0翻译成a ，1翻译成b，……，11翻译成l，……，25翻译成z。一个数字可能有多个翻译。请编程实现一个函数，用来计算一个数字有多少种不同的翻译方法。">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://github.com/cenganhui/Blog_Image/raw/master/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F%E7%B1%BB%E5%9B%BE.png">
-<meta property="og:image" content="http://github.com/cenganhui/Blog_Image/raw/master/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F%E8%BE%93%E5%87%BA%E7%BB%93%E6%9E%9C.png">
-<meta property="article:published_time" content="2020-04-29T12:54:34.000Z">
-<meta property="article:modified_time" content="2020-05-02T02:06:41.683Z">
+<meta property="og:image" content="https://pic.leetcode-cn.com/e231fde16304948251633cfc65d04396f117239ea2d13896b1d2678de9067b42-Picture1.png">
+<meta property="article:published_time" content="2020-05-02T13:04:29.000Z">
+<meta property="article:modified_time" content="2020-05-02T13:27:49.521Z">
 <meta property="article:author" content="Akuma">
-<meta property="article:tag" content="设计模式">
-<meta property="article:tag" content="原型模式">
+<meta property="article:tag" content="算法">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://github.com/cenganhui/Blog_Image/raw/master/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F%E7%B1%BB%E5%9B%BE.png">
+<meta name="twitter:image" content="https://pic.leetcode-cn.com/e231fde16304948251633cfc65d04396f117239ea2d13896b1d2678de9067b42-Picture1.png">
   
     <link rel="alternative" href="/atom.xml" title="Akuma Blog" type="application/atom+xml">
   
@@ -159,37 +157,43 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-设计模式-原型模式" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-剑指Offer-面试题46-把数字翻译成字符串" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      设计模式-原型模式
+      剑指Offer-面试题46-把数字翻译成字符串
     </h1>
   
 
         
-        <a href="/2020/04/29/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-04-29T12:54:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-29</time>
+        <a href="/2020/05/02/%E5%89%91%E6%8C%87Offer-%E9%9D%A2%E8%AF%95%E9%A2%9846-%E6%8A%8A%E6%95%B0%E5%AD%97%E7%BF%BB%E8%AF%91%E6%88%90%E5%AD%97%E7%AC%A6%E4%B8%B2/" class="archive-article-date">
+  	<time datetime="2020-05-02T13:04:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-02</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="原型模式"><a href="#原型模式" class="headerlink" title="原型模式"></a>原型模式</h2><ul>
-<li>原型模式是一种对象创建型模式，用原型实例指定创建对象的种类，并且通过复制这些原型创建新的对象。</li>
-<li>原型模式允许通过一个原型对象创建一个或多个同类型的其他对象，而无须知道任何创建的细节。<a id="more"></a>
-<h2 id="原型模式例子"><a href="#原型模式例子" class="headerlink" title="原型模式例子"></a>原型模式例子</h2>在系统中，用户可以创建工作周报，由于某些岗位每周工作存在重复性，因此可以通过复制原有工作周报进行局部修改来快速创建工作周报，现使用原型模式来实现此功能。</li>
+        <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>给定一个数字，我们按照如下规则把它翻译为字符串：<code>0</code>翻译成<code>a</code> ，<code>1</code>翻译成<code>b</code>，……，<code>11</code>翻译成<code>l</code>，……，<code>25</code>翻译成<code>z</code>。一个数字可能有多个翻译。请编程实现一个函数，用来计算一个数字有多少种不同的翻译方法。</p>
+<a id="more"></a>
+<p><strong>示例1</strong>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: 12258</span><br><span class="line">输出: 5</span><br><span class="line">解释: 12258有5种不同的翻译，分别是&quot;bccfi&quot;, &quot;bwfi&quot;, &quot;bczi&quot;, &quot;mcfi&quot;和&quot;mzi&quot;</span><br></pre></td></tr></table></figure>
+
+<p><strong>提示</strong>：<code>0 &lt;= num &lt; 2^31</code></p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>动态规划，流程题解如下：</p>
+<p><img src="https://pic.leetcode-cn.com/e231fde16304948251633cfc65d04396f117239ea2d13896b1d2678de9067b42-Picture1.png" alt="图解"></p>
+<p><strong>转移方程</strong>：<br><code>dp[i] = dp[i -1] + dp[i -2] ,10*x(i-1) + x(i) ∈[10,25]</code><br><code>dp[i] = dp[i -1]            ,10*x(i-1) + x(i) ∈[0,10)∪(25,99]</code><br><strong>初始状态</strong>：<code>dp[0] = dp[1] = 1</code><br><strong>流程</strong>：</p>
+<ul>
+<li>将数字<code>num</code>转化成字符串<code>s</code>，遍历字符串<code>s</code>实现动态规划</li>
+<li>字符串切片<code>s[i-2,i]</code>，获取组合<code>10*x(i-1) + x(i)</code>，通过字符串比较判断所属区间</li>
+<li>用<code>a</code>，<code>b</code>分别记录<code>dp[i]</code>，<code>dp[i-1]</code></li>
 </ul>
-<p><img src="http://github.com/cenganhui/Blog_Image/raw/master/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F%E7%B1%BB%E5%9B%BE.png" alt="原型模式类图"></p>
-<h3 id="工作周报：具体原型类"><a href="#工作周报：具体原型类" class="headerlink" title="工作周报：具体原型类"></a>工作周报：具体原型类</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WeeklyLog</span> <span class="keyword">implements</span> <span class="title">Cloneable</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> String date;</span><br><span class="line">    <span class="keyword">private</span> String content;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.name = name; </span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setDate</span><span class="params">(String date)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.date = date; </span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setContent</span><span class="params">(String content)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.content = content; </span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> (<span class="keyword">this</span>.name); </span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">getDate</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> (<span class="keyword">this</span>.date); </span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">getContent</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> (<span class="keyword">this</span>.content); </span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">clone</span><span class="params">()</span></span>&#123;</span><br><span class="line">        WeeklyLog clone = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">try</span>&#123;</span><br><span class="line">            clone = (WeeklyLog)<span class="keyword">super</span>.clone();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">catch</span>(CloneNotSupportedException e)&#123;</span><br><span class="line">            System.out.println(<span class="string">"Clone failure!"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> clone;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="客户端测试类"><a href="#客户端测试类" class="headerlink" title="客户端测试类"></a>客户端测试类</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Client</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		WeeklyLog log_previous = <span class="keyword">new</span> WeeklyLog();</span><br><span class="line">		log_previous.setName(<span class="string">"张三"</span>);</span><br><span class="line">		log_previous.setDate(<span class="string">"2016年第2周"</span>);</span><br><span class="line">		log_previous.setContent(<span class="string">"这周工作很忙，每天加班！"</span>);</span><br><span class="line">		</span><br><span class="line">		System.out.println(<span class="string">"****周报****"</span>);</span><br><span class="line">		System.out.println(log_previous.getDate());</span><br><span class="line">		System.out.println(log_previous.getName());</span><br><span class="line">		System.out.println(log_previous.getContent());</span><br><span class="line">		System.out.println(<span class="string">"--------------------------------"</span>);</span><br><span class="line">		</span><br><span class="line">		WeeklyLog log_now;  <span class="comment">//进行克隆</span></span><br><span class="line">		log_now = (WeeklyLog)log_previous.clone();</span><br><span class="line">		log_now.setDate(<span class="string">"2016年第3周"</span>);</span><br><span class="line">		System.out.println(<span class="string">"****周报****"</span>);</span><br><span class="line">		System.out.println(log_now.getDate());</span><br><span class="line">		System.out.println(log_now.getName());</span><br><span class="line">		System.out.println(log_now.getContent());</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="输出结果"><a href="#输出结果" class="headerlink" title="输出结果"></a>输出结果</h3><p><img src="http://github.com/cenganhui/Blog_Image/raw/master/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F%E8%BE%93%E5%87%BA%E7%BB%93%E6%9E%9C.png" alt="原型模式输出结果"></p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">translationNum</span><span class="params">(<span class="keyword">int</span> num)</span></span>&#123;</span><br><span class="line">        <span class="comment">//将num转成字符串s</span></span><br><span class="line">        String s = String.valueOf(num);</span><br><span class="line">        <span class="keyword">int</span> a = <span class="number">1</span>;  <span class="comment">//dp[i]</span></span><br><span class="line">        <span class="keyword">int</span> b = <span class="number">1</span>;  <span class="comment">//dp[i-1]</span></span><br><span class="line">        <span class="keyword">int</span> c = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=s.length();i++)&#123;</span><br><span class="line">            <span class="comment">//substrirng()左闭右开</span></span><br><span class="line">            <span class="comment">//获取组合</span></span><br><span class="line">            String temp = str.substring(i-<span class="number">2</span>,i);</span><br><span class="line">            <span class="comment">//通过字符串对比得出所属区间，判断组合是否可被整体翻译</span></span><br><span class="line">            <span class="keyword">if</span>(temp.compareTo(<span class="string">"10"</span>)&gt;=<span class="number">0</span> &amp;&amp; temp.compareTo(<span class="string">"25"</span>)&lt;=<span class="number">0</span>)&#123; <span class="comment">//组合可被翻译</span></span><br><span class="line">                c = a + b;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;   <span class="comment">//组合不能被翻译</span></span><br><span class="line">                c = a;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//更新</span></span><br><span class="line">            b = a;</span><br><span class="line">            a = c;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>思路参考大佬</strong><br>作者：jyd<br>链接：<a href="https://leetcode-cn.com/problems/ba-shu-zi-fan-yi-cheng-zi-fu-chuan-lcof/solution/mian-shi-ti-46-ba-shu-zi-fan-yi-cheng-zi-fu-chua-6/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/ba-shu-zi-fan-yi-cheng-zi-fu-chuan-lcof/solution/mian-shi-ti-46-ba-shu-zi-fan-yi-cheng-zi-fu-chua-6/</a><br>来源：力扣（LeetCode）<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/ba-shu-zi-fan-yi-cheng-zi-fu-chuan-lcof" target="_blank" rel="noopener">https://leetcode-cn.com/problems/ba-shu-zi-fan-yi-cheng-zi-fu-chuan-lcof</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
 
       
 
@@ -203,11 +207,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">原型模式</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
         		</li>
       		
 		</ul>
@@ -219,11 +219,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/设计模式//" class="article-tag-list-link color5">设计模式</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/设计模式/原型模式//" class="article-tag-list-link color5">原型模式</a>
+        			<a href="/categories/算法//" class="article-tag-list-link color3">算法</a>
         		</li>
       		
 		</ul>
@@ -278,7 +274,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://cenganhui.github.io/2020/04/29/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://cenganhui.github.io/2020/05/02/%E5%89%91%E6%8C%87Offer-%E9%9D%A2%E8%AF%95%E9%A2%9846-%E6%8A%8A%E6%95%B0%E5%AD%97%E7%BF%BB%E8%AF%91%E6%88%90%E5%AD%97%E7%AC%A6%E4%B8%B2/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -292,18 +288,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/04/29/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%EF%BC%88%E4%BA%8C%EF%BC%89/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/05/02/JVM-%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86%E7%AE%97%E6%B3%95%E4%B8%8E%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86%E5%99%A8/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          排序算法（二）
+          JVM-垃圾收集算法与垃圾收集器
         
       </div>
     </a>
   
   
-    <a href="/2020/04/29/Java%E5%9F%BA%E7%A1%80%EF%BC%88%E4%BA%8C%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Java基础（二）</div>
+    <a href="/2020/05/02/%E5%89%91%E6%8C%87Offer-%E9%9D%A2%E8%AF%95%E9%A2%9838-%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%8E%92%E5%88%97/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">剑指Offer-面试题38-字符串的排列</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -330,7 +326,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#原型模式"><span class="toc-number">1.</span> <span class="toc-text">原型模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#原型模式例子"><span class="toc-number">2.</span> <span class="toc-text">原型模式例子</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#工作周报：具体原型类"><span class="toc-number">2.1.</span> <span class="toc-text">工作周报：具体原型类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#客户端测试类"><span class="toc-number">2.2.</span> <span class="toc-text">客户端测试类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#输出结果"><span class="toc-number">2.3.</span> <span class="toc-text">输出结果</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目描述"><span class="toc-number">1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#思路"><span class="toc-number">2.</span> <span class="toc-text">思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码"><span class="toc-number">3.</span> <span class="toc-text">代码</span></a></li></ol>
                     </div>
                 </span>
             </div>
