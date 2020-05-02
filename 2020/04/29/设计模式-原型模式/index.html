@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="https://cenganhui.github.io">
   <title>设计模式-原型模式 | Akuma Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="……">
+  <meta name="description" content="原型模式 原型模式是一种对象创建型模式，用原型实例指定创建对象的种类，并且通过复制这些原型创建新的对象。 原型模式允许通过一个原型对象创建一个或多个同类型的其他对象，而无须知道任何创建的细节。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="设计模式-原型模式">
 <meta property="og:url" content="https://cenganhui.github.io/2020/04/29/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/index.html">
 <meta property="og:site_name" content="Akuma Blog">
-<meta property="og:description" content="……">
+<meta property="og:description" content="原型模式 原型模式是一种对象创建型模式，用原型实例指定创建对象的种类，并且通过复制这些原型创建新的对象。 原型模式允许通过一个原型对象创建一个或多个同类型的其他对象，而无须知道任何创建的细节。">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://github.com/cenganhui/Blog_Image/raw/master/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F%E7%B1%BB%E5%9B%BE.png">
 <meta property="og:image" content="http://github.com/cenganhui/Blog_Image/raw/master/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F%E8%BE%93%E5%87%BA%E7%BB%93%E6%9E%9C.png">
 <meta property="article:published_time" content="2020-04-29T12:54:34.000Z">
-<meta property="article:modified_time" content="2020-04-30T01:08:52.214Z">
+<meta property="article:modified_time" content="2020-05-02T02:06:41.683Z">
 <meta property="article:author" content="Akuma">
 <meta property="article:tag" content="设计模式">
 <meta property="article:tag" content="原型模式">
@@ -179,14 +179,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>……</p>
-<a id="more"></a>
-
-<h2 id="原型模式"><a href="#原型模式" class="headerlink" title="原型模式"></a>原型模式</h2><ul>
+        <h2 id="原型模式"><a href="#原型模式" class="headerlink" title="原型模式"></a>原型模式</h2><ul>
 <li>原型模式是一种对象创建型模式，用原型实例指定创建对象的种类，并且通过复制这些原型创建新的对象。</li>
-<li>原型模式允许通过一个原型对象创建一个或多个同类型的其他对象，而无须知道任何创建的细节。</li>
+<li>原型模式允许通过一个原型对象创建一个或多个同类型的其他对象，而无须知道任何创建的细节。<a id="more"></a>
+<h2 id="原型模式例子"><a href="#原型模式例子" class="headerlink" title="原型模式例子"></a>原型模式例子</h2>在系统中，用户可以创建工作周报，由于某些岗位每周工作存在重复性，因此可以通过复制原有工作周报进行局部修改来快速创建工作周报，现使用原型模式来实现此功能。</li>
 </ul>
-<h2 id="原型模式例子"><a href="#原型模式例子" class="headerlink" title="原型模式例子"></a>原型模式例子</h2><p>在系统中，用户可以创建工作周报，由于某些岗位每周工作存在重复性，因此可以通过复制原有工作周报进行局部修改来快速创建工作周报，现使用原型模式来实现此功能。</p>
 <p><img src="http://github.com/cenganhui/Blog_Image/raw/master/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F%E7%B1%BB%E5%9B%BE.png" alt="原型模式类图"></p>
 <h3 id="工作周报：具体原型类"><a href="#工作周报：具体原型类" class="headerlink" title="工作周报：具体原型类"></a>工作周报：具体原型类</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WeeklyLog</span> <span class="keyword">implements</span> <span class="title">Cloneable</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> String date;</span><br><span class="line">    <span class="keyword">private</span> String content;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.name = name; </span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setDate</span><span class="params">(String date)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.date = date; </span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setContent</span><span class="params">(String content)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.content = content; </span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> (<span class="keyword">this</span>.name); </span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">getDate</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> (<span class="keyword">this</span>.date); </span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">getContent</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> (<span class="keyword">this</span>.content); </span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">clone</span><span class="params">()</span></span>&#123;</span><br><span class="line">        WeeklyLog clone = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">try</span>&#123;</span><br><span class="line">            clone = (WeeklyLog)<span class="keyword">super</span>.clone();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">catch</span>(CloneNotSupportedException e)&#123;</span><br><span class="line">            System.out.println(<span class="string">"Clone failure!"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> clone;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -462,6 +459,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">计算机网络</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">单例模式</a>
               </li>
              
               <li class="article-tag-list-item">
