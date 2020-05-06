@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://cenganhui.github.io">
-  <title>剑指Offer-面试题31-栈的压入、弹出序列 | Akuma Blog</title>
+  <title>剑指Offer-面试题10-II-青蛙跳台阶问题 | Akuma Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="题目描述输入两个整数序列，第一个序列表示栈的压入顺序，请判断第二个序列是否为该栈的弹出顺序。假设压入栈的所有数字均不相等。例如，序列{1,2,3,4,5}是某栈的压栈序列，序列{4,5,3,2,1}是该压栈序列对应的一个弹出序列，但{4,3,5,1,2}就不可能是该压栈序列的弹出序列。">
+  <meta name="description" content="题目描述一只青蛙一次可以跳上1级台阶，也可以跳上2级台阶。求该青蛙跳上一个 n级的台阶总共有多少种跳法。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="剑指Offer-面试题31-栈的压入、弹出序列">
-<meta property="og:url" content="https://cenganhui.github.io/2020/05/01/%E5%89%91%E6%8C%87Offer-%E9%9D%A2%E8%AF%95%E9%A2%9831-%E6%A0%88%E7%9A%84%E5%8E%8B%E5%85%A5%E3%80%81%E5%BC%B9%E5%87%BA%E5%BA%8F%E5%88%97/index.html">
+<meta property="og:title" content="剑指Offer-面试题10-II-青蛙跳台阶问题">
+<meta property="og:url" content="https://cenganhui.github.io/2020/05/06/%E5%89%91%E6%8C%87Offer-%E9%9D%A2%E8%AF%95%E9%A2%9810-II-%E9%9D%92%E8%9B%99%E8%B7%B3%E5%8F%B0%E9%98%B6%E9%97%AE%E9%A2%98/index.html">
 <meta property="og:site_name" content="Akuma Blog">
-<meta property="og:description" content="题目描述输入两个整数序列，第一个序列表示栈的压入顺序，请判断第二个序列是否为该栈的弹出顺序。假设压入栈的所有数字均不相等。例如，序列{1,2,3,4,5}是某栈的压栈序列，序列{4,5,3,2,1}是该压栈序列对应的一个弹出序列，但{4,3,5,1,2}就不可能是该压栈序列的弹出序列。">
+<meta property="og:description" content="题目描述一只青蛙一次可以跳上1级台阶，也可以跳上2级台阶。求该青蛙跳上一个 n级的台阶总共有多少种跳法。">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-05-01T10:12:49.000Z">
-<meta property="article:modified_time" content="2020-05-01T11:31:51.712Z">
+<meta property="article:published_time" content="2020-05-06T00:37:01.000Z">
+<meta property="article:modified_time" content="2020-05-06T00:43:49.864Z">
 <meta property="article:author" content="Akuma">
 <meta property="article:tag" content="算法">
 <meta name="twitter:card" content="summary">
@@ -155,20 +155,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-剑指Offer-面试题31-栈的压入、弹出序列" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-剑指Offer-面试题10-II-青蛙跳台阶问题" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      剑指Offer-面试题31-栈的压入、弹出序列
+      剑指Offer-面试题10-II-青蛙跳台阶问题
     </h1>
   
 
         
-        <a href="/2020/05/01/%E5%89%91%E6%8C%87Offer-%E9%9D%A2%E8%AF%95%E9%A2%9831-%E6%A0%88%E7%9A%84%E5%8E%8B%E5%85%A5%E3%80%81%E5%BC%B9%E5%87%BA%E5%BA%8F%E5%88%97/" class="archive-article-date">
-  	<time datetime="2020-05-01T10:12:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-01</time>
+        <a href="/2020/05/06/%E5%89%91%E6%8C%87Offer-%E9%9D%A2%E8%AF%95%E9%A2%9810-II-%E9%9D%92%E8%9B%99%E8%B7%B3%E5%8F%B0%E9%98%B6%E9%97%AE%E9%A2%98/" class="archive-article-date">
+  	<time datetime="2020-05-06T00:37:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-06</time>
 </a>
 
 <!-- 不蒜子统计 -->
@@ -181,24 +181,23 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>输入两个整数序列，第一个序列表示栈的压入顺序，请判断第二个序列是否为该栈的弹出顺序。假设压入栈的所有数字均不相等。例如，序列<code>{1,2,3,4,5}</code>是某栈的压栈序列，序列<code>{4,5,3,2,1}</code>是该压栈序列对应的一个弹出序列，但<code>{4,3,5,1,2}</code>就不可能是该压栈序列的弹出序列。</p>
+        <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>一只青蛙一次可以跳上<code>1</code>级台阶，也可以跳上<code>2</code>级台阶。求该青蛙跳上一个 <code>n</code>级的台阶总共有多少种跳法。</p>
 <a id="more"></a>
-<p><strong>示例1</strong>:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入：pushed &#x3D; [1,2,3,4,5], popped &#x3D; [4,5,3,2,1]</span><br><span class="line">输出：true</span><br><span class="line">解释：我们可以按以下顺序执行：</span><br><span class="line">push(1), push(2), push(3), push(4), pop() -&gt; 4,</span><br><span class="line">push(5), pop() -&gt; 5, pop() -&gt; 3, pop() -&gt; 2, pop() -&gt; 1</span><br></pre></td></tr></table></figure>
+<p>答案需要取模<code>1e9+7（1000000007）</code>，如计算初始结果为：1000000008，请返回 1。</p>
+<p><strong>示例1</strong>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：n &#x3D; 2</span><br><span class="line">输出：2</span><br></pre></td></tr></table></figure>
 
-<p><strong>示例2</strong>:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：pushed &#x3D; [1,2,3,4,5], popped &#x3D; [4,3,5,1,2]</span><br><span class="line">输出：false</span><br><span class="line">解释：1 不能在 2 之前弹出。</span><br></pre></td></tr></table></figure>
+<p><strong>示例2</strong>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：n &#x3D; 7</span><br><span class="line">输出：21</span><br></pre></td></tr></table></figure>
 
-<p><strong>提示</strong>：</p>
-<ol>
-<li><code>0 &lt;= pushed.length == popped.length &lt;= 1000</code></li>
-<li><code>0 &lt;= pushed[i],popped[i] &lt; 1000</code></li>
-<li><code>pushed</code>是<code>popped</code>的排列</li>
-</ol>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>遍历<code>pushed</code>，逐个压入栈，压栈过程中，根据栈顶元素与<code>popped</code>中的元素进行比较来模拟<code>popped</code>的出栈，如果最后栈中元素全都可以出栈（栈为空），即说明可以按照<code>popped</code>序列弹出。</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">validateStackSequences</span><span class="params">(<span class="keyword">int</span>[] pushed,<span class="keyword">int</span>[] popped)</span></span>&#123;</span><br><span class="line">        Stack&lt;Integer&gt; stack = <span class="keyword">new</span> Stack&lt;&gt;();   <span class="comment">//创建一个栈进行模拟</span></span><br><span class="line">        <span class="keyword">int</span> index = <span class="number">0</span>;  <span class="comment">//popped数组的索引</span></span><br><span class="line">        <span class="keyword">int</span> len = pushed.length;    <span class="comment">//数组长度</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;len;i++)&#123; <span class="comment">//遍历数组</span></span><br><span class="line">            stack.push(pushed[i]);  <span class="comment">//压栈</span></span><br><span class="line">            <span class="comment">//若栈不为空、popped遍历完且与栈顶相等，则出栈，index后移</span></span><br><span class="line">            <span class="keyword">while</span>(!stack.isEmpty() &amp;&amp; index&lt;len &amp;&amp; stack.peek()==popped[index])&#123;</span><br><span class="line">                stack.pop();</span><br><span class="line">                index++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//遍历完pushed数组后，若能把栈中元素全部弹出，说明能按照popped数组的序列出栈</span></span><br><span class="line">        <span class="keyword">return</span> stack.isEmpty();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>提示</strong>：<code>0 &lt;= n &lt;= 100</code></p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><ul>
+<li>一只青蛙一次可以跳上<code>1</code>级台阶，也可以跳上<code>2</code>级台阶，那么它跳上n级台阶有两种情况，一种是从n-1级跳1级上去，一种是从n-2级跳2级上去，根据这个推理可以得出<code>f(n) = f(n-1) + f(n-2)</code>，本质上就是斐波那契数列，只不过初始值不同。</li>
+<li>根据题目示例，<code>f(2)=2</code>，显然<code>f(1)=1</code>，因此<code>f(0)=1</code></li>
+</ul>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">numWays</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> a = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> b = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> sum =<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">            sum = (a + b) % <span class="number">1000000007</span>;</span><br><span class="line">            a = b;</span><br><span class="line">            b = sum;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/zhan-de-ya-ru-dan-chu-xu-lie-lcof" target="_blank" rel="noopener">https://leetcode-cn.com/problems/zhan-de-ya-ru-dan-chu-xu-lie-lcof</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/qing-wa-tiao-tai-jie-wen-ti-lcof" target="_blank" rel="noopener">https://leetcode-cn.com/problems/qing-wa-tiao-tai-jie-wen-ti-lcof</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
 
       
 
@@ -279,7 +278,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://cenganhui.github.io/2020/05/01/%E5%89%91%E6%8C%87Offer-%E9%9D%A2%E8%AF%95%E9%A2%9831-%E6%A0%88%E7%9A%84%E5%8E%8B%E5%85%A5%E3%80%81%E5%BC%B9%E5%87%BA%E5%BA%8F%E5%88%97/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://cenganhui.github.io/2020/05/06/%E5%89%91%E6%8C%87Offer-%E9%9D%A2%E8%AF%95%E9%A2%9810-II-%E9%9D%92%E8%9B%99%E8%B7%B3%E5%8F%B0%E9%98%B6%E9%97%AE%E9%A2%98/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -293,18 +292,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/05/01/%E5%89%91%E6%8C%87Offer-%E9%9D%A2%E8%AF%95%E9%A2%9834-%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%AD%E5%92%8C%E4%B8%BA%E6%9F%90%E4%B8%80%E5%80%BC%E7%9A%84%E8%B7%AF%E5%BE%84/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/05/06/%E5%89%91%E6%8C%87Offer-%E9%9D%A2%E8%AF%95%E9%A2%9858-I-%E7%BF%BB%E8%BD%AC%E5%8D%95%E8%AF%8D%E9%A1%BA%E5%BA%8F/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          剑指Offer-面试题34-二叉树中和为某一值的路径
+          剑指Offer-面试题58-I-翻转单词顺序
         
       </div>
     </a>
   
   
-    <a href="/2020/05/01/%E5%89%91%E6%8C%87Offer-%E9%9D%A2%E8%AF%95%E9%A2%9832-III-%E4%BB%8E%E4%B8%8A%E5%88%B0%E4%B8%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91III/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">剑指Offer-面试题32-III-从上到下打印二叉树III</div>
+    <a href="/2020/05/05/Java%E9%9B%86%E5%90%88-ConcurrentHashMap/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java集合-ConcurrentHashMap</div>
       <i class="icon-circle-right"></i>
     </a>
   
