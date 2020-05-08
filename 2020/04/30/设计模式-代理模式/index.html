@@ -8,12 +8,12 @@
   <link rel="dns-prefetch" href="https://cenganhui.github.io">
   <title>设计模式-代理模式 | Akuma Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="代理模式模式动机 通过引入一个新的对象来实现对真实对象的操作，或者将新的对象作为真实对象的一个替身。 引入代理对象来简介访问一个对象。">
+  <meta name="description" content="代理模式模式动机 通过引入一个新的对象来实现对真实对象的操作，或者将新的对象作为真实对象的一个替身。 引入代理对象来间接访问一个对象。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="设计模式-代理模式">
 <meta property="og:url" content="https://cenganhui.github.io/2020/04/30/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F/index.html">
 <meta property="og:site_name" content="Akuma Blog">
-<meta property="og:description" content="代理模式模式动机 通过引入一个新的对象来实现对真实对象的操作，或者将新的对象作为真实对象的一个替身。 引入代理对象来简介访问一个对象。">
+<meta property="og:description" content="代理模式模式动机 通过引入一个新的对象来实现对真实对象的操作，或者将新的对象作为真实对象的一个替身。 引入代理对象来间接访问一个对象。">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://github.com/cenganhui/Blog_Image/raw/master/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F%E7%BB%93%E6%9E%84%E5%9B%BE.png">
 <meta property="og:image" content="http://github.com/cenganhui/Blog_Image/raw/master/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E9%9D%99%E6%80%81%E4%BB%A3%E7%90%86%E7%B1%BB%E5%9B%BE.png">
@@ -21,7 +21,7 @@
 <meta property="og:image" content="http://github.com/cenganhui/Blog_Image/raw/master/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86%E7%B1%BB%E5%9B%BE.png">
 <meta property="og:image" content="http://github.com/cenganhui/Blog_Image/raw/master/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86%E8%BE%93%E5%87%BA%E7%BB%93%E6%9E%9C.png">
 <meta property="article:published_time" content="2020-04-30T01:03:35.000Z">
-<meta property="article:modified_time" content="2020-05-02T02:06:31.495Z">
+<meta property="article:modified_time" content="2020-05-08T09:23:01.011Z">
 <meta property="article:author" content="Akuma">
 <meta property="article:tag" content="设计模式">
 <meta property="article:tag" content="代理模式">
@@ -190,7 +190,7 @@
       
         <h2 id="代理模式"><a href="#代理模式" class="headerlink" title="代理模式"></a>代理模式</h2><h3 id="模式动机"><a href="#模式动机" class="headerlink" title="模式动机"></a>模式动机</h3><ul>
 <li>通过引入一个新的对象来实现对真实对象的操作，或者将新的对象作为真实对象的一个替身。</li>
-<li>引入代理对象来简介访问一个对象。<a id="more"></a>
+<li>引入代理对象来间接访问一个对象。<a id="more"></a>
 <h3 id="模式定义"><a href="#模式定义" class="headerlink" title="模式定义"></a>模式定义</h3></li>
 <li>给某一个对象提供一个代理，并由代理对象控制对原对象的引用。</li>
 <li>对象结构型模式。</li>
@@ -477,15 +477,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">JVM</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">集合</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">ArrayList</a>
+                <a href="javascript:void(0)" class="js-tag color2">Java基础</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -497,11 +489,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Java基础</a>
+                <a href="javascript:void(0)" class="js-tag color3">集合</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+                <a href="javascript:void(0)" class="js-tag color5">ArrayList</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -509,7 +501,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">ConcurrentHashMap</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">JVM</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -521,11 +521,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">网络层</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">IP</a>
+                <a href="javascript:void(0)" class="js-tag color5">HTTP</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -534,6 +530,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">UDP、TCP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">网络层</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">IP</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -549,11 +553,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">原型模式</a>
+                <a href="javascript:void(0)" class="js-tag color2">简单工厂模式</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">简单工厂模式</a>
+                <a href="javascript:void(0)" class="js-tag color5">原型模式</a>
               </li>
             
             <div class="clearfix"></div>
